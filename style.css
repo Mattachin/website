@@ -1,0 +1,118 @@
+/* Lefteris Krysalis — site stylesheet
+   The colour of all text and lines is set once, here: */
+:root {
+  --ink: #3b449c;          /* the blue from the portfolio PDF (black would be #000000) */
+  --paper: #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 2rem clamp(1.25rem, 4vw, 3.5rem) 3rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 76rem;
+  margin-inline: auto;
+}
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+p { margin: 0 0 1em; }
+h1, h2 { margin: 0; font-weight: 700; line-height: 1.15; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* The path, as in the portfolio: Lefteris Krysalis/ Selected Works/ installation */
+.path { font-weight: 700; font-size: 0.95rem; text-align: right; margin-bottom: 4rem; }
+.path a { text-decoration: none; }
+.path a:hover { text-decoration: underline; }
+
+/* ---------- Home ---------- */
+.home h1 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); letter-spacing: -0.01em; line-height: 1.05; }
+.home .role { font-size: 1.05rem; margin: 0.35rem 0 2.5rem; }
+.cats ul { list-style: none; margin: 0 0 4rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.4rem; }
+.cats a { text-decoration: none; font-weight: 700; }
+.cats a:hover { text-decoration: underline; }
+
+.cat { margin-bottom: 3rem; scroll-margin-top: 1.5rem; }
+.cat h2 { font-size: 1.05rem; margin-bottom: 0.8rem; }
+.cat .intro { max-width: 40rem; margin-bottom: 1.2rem; }
+.index { list-style: none; margin: 0; padding: 0; }
+.index a { display: grid; grid-template-columns: 7.5rem minmax(0, 1.4fr) minmax(0, 1fr); gap: 1.5rem; padding: 0.3rem 0; text-decoration: none; }
+.index .yr { font-variant-numeric: tabular-nums; }
+.index a:hover .t { text-decoration: underline; }
+
+/* ---------- Work page ---------- */
+.work h1 {
+  font-size: clamp(1.9rem, 4.6vw, 3.4rem);
+  letter-spacing: -0.015em;
+  text-align: right;
+  max-width: 22ch;
+  margin: 0 0 0.8rem auto;
+}
+.work .venue { text-align: right; font-size: 1.15rem; margin: 0 0 4rem; }
+.meta { font-weight: 700; font-size: 1.1rem; line-height: 1.35; max-width: 42rem; margin-bottom: 3.5rem; }
+.meta p { margin: 0; }
+
+.cols { display: grid; grid-template-columns: minmax(0, 36rem) minmax(0, 1fr); gap: 3rem clamp(2rem, 6vw, 6rem); align-items: start; }
+.cols.single { grid-template-columns: minmax(0, 40rem); }
+
+.text h2 { font-size: 1.05rem; margin: 2.5rem 0 0.6rem; }
+.text > h2:first-child, .text > .entry:first-child h2 { margin-top: 0; }
+.text ul { margin: 0 0 1em; padding-left: 1.2em; }
+.credits { font-size: 0.9rem; }
+.entry { margin-bottom: 2rem; }
+.entry h2 { margin: 0 0 0.4rem; }
+.entry p { margin-bottom: 0.3rem; }
+
+.side figure { margin: 0 0 2rem; }
+.side figure.small { width: 45%; margin-left: auto; }
+.side figcaption { font-size: 0.75rem; text-align: right; margin-top: 0.35rem; }
+.links { list-style: none; margin: 0; padding: 0; }
+.links li { margin-bottom: 0.8rem; }
+.links .audio span { display: block; margin-bottom: 0.3rem; }
+.links audio { width: 100%; max-width: 26rem; }
+.links .embed iframe { width: 100%; max-width: 26rem; border: 0; }
+
+/* Gaps still to be written ("To fill in: ...").
+   Hidden on the site. To see them while working, delete the line  display: none;  */
+.gap { display: none; border: 1px dashed var(--ink); padding: 0.8rem 1rem; font-style: italic; }
+
+/* ---------- CV ---------- */
+.cv h1 { font-size: clamp(1.9rem, 4.6vw, 3.4rem); margin-bottom: 0.6rem; }
+.cv .meta-line { margin-bottom: 3rem; }
+.cv section { margin-bottom: 2.5rem; max-width: 52rem; }
+.cv h2 { font-size: 1.05rem; margin-bottom: 0.8rem; }
+.cv dl { margin: 0; }
+.cv dl div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; margin-bottom: 0.5rem; }
+.cv dt { font-variant-numeric: tabular-nums; }
+.cv dd { margin: 0; }
+
+/* ---------- Footer ---------- */
+.site-foot { margin-top: 6rem; display: flex; flex-wrap: wrap; gap: 0.4rem 2rem; font-size: 0.9rem; }
+.site-foot p { margin: 0; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 52rem) {
+  .cols, .cols.single { grid-template-columns: minmax(0, 1fr); }
+  .path { text-align: left; margin-bottom: 2.5rem; }
+  .work h1 { text-align: left; margin: 0 0 0.6rem; }
+  .work .venue { text-align: left; margin-bottom: 2.5rem; }
+  .index a { grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0 1.5rem; }
+  .index .v { grid-column: 2; }
+  .meta { margin-bottom: 2.5rem; }
+  .side figure.small { width: 45%; margin-left: auto; }
+.side figcaption { text-align: left; }
+}
+@media (max-width: 30rem) {
+  .index a { grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0.5rem 0; }
+  .index .v { grid-column: 1; }
+  .cv dl div { grid-template-columns: minmax(0, 1fr); gap: 0; margin-bottom: 0.9rem; }
+}
