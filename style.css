@@ -119,5 +119,3 @@ figure.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: blo
   .index .v { grid-column: 1; }
   .cv dl div { grid-template-columns: minmax(0, 1fr); gap: 0; margin-bottom: 0.9rem; }
 }
-.side figure.video.portrait iframe { aspect-ratio: 9 / 16; }
-.side figure.video.portrait { width: 62%; }
