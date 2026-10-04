@@ -80,7 +80,13 @@ img { max-width: 100%; height: auto; display: block; }
 .links .audio span { display: block; margin-bottom: 0.3rem; }
 .links audio { width: 100%; max-width: 26rem; }
 .links .embed iframe { width: 100%; max-width: 26rem; border: 0; }
-.side figure.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+
+/* Video documentation, below the two columns */
+figure.video { margin: 3.5rem 0 0; max-width: 52rem; }
+figure.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+figure.video figcaption { font-size: 0.75rem; margin-top: 0.35rem; }
+figure.video.portrait { max-width: 24rem; }
+figure.video.portrait iframe { aspect-ratio: 9 / 16; }
 
 /* Gaps still to be written ("To fill in: ...").
    Hidden on the site. To see them while working, delete the line  display: none;  */
