@@ -121,6 +121,7 @@ figure.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: blo
 .category h1 { margin-bottom: 3.5rem; }
 .catcols { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 3rem clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .catcover { margin: 0; }
+.catcover figcaption { font-size: 0.75rem; text-align: right; margin-top: 0.35rem; }
 .catlist .index a { grid-template-columns: 6.5rem minmax(0, 1.3fr) minmax(0, 1fr); }
 
 @media (max-width: 52rem) {
@@ -136,7 +137,7 @@ figure.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: blo
 /* ---------- A night page (Night Perspectives) ----------
    A work page whose <body> has class="night" is shown dark, like a night broadcast. */
 body.night { --ink: #e6e7ef; --paper: #0c0c0f; color-scheme: dark; }
-.night .nightmap { margin: 0 0 3.5rem; }
+.night .nightmap { margin: 0 0 3.5rem auto; max-width: 52rem; }
 .night .nightmap img { width: 100%; }
 .night .nightmap figcaption { font-size: 0.75rem; text-align: right; margin-top: 0.4rem; opacity: 0.75; }
 .night .red { color: #f0524a; font-weight: 700; }
