@@ -6,7 +6,8 @@ your browser, no internet or server needed.
 
 WHAT IS IN THE FOLDER
 
-index.html        the front page: your name and the list of all works
+index.html        the front page: your name, the upcoming list and one tile per category
+*.html (main)     one page per category with its list of works, e.g. installations.html
 cv.html           the CV as a web page
 cv.pdf            the CV as a download
 impressum.html    empty for now; not linked yet (see below)
@@ -46,9 +47,12 @@ HOW TO ADD A NEW WORK
    Each paragraph is one <p>...</p>. Each link is one <li>...</li>.
    If there is no image or no audio, delete that line.
 3. Put its image in images/ (and MP3s in audio/).
-4. Open index.html, find the category (e.g. <section class="cat" id="installations">)
-   and copy one existing line inside it, like:
+4. Open the category page the work belongs to (installations.html,
+   transmissions.html, teaching.html, ... in the main folder) and copy one
+   existing line inside its list, like:
    <li><a href="works/my-new-work.html"><span class="yr">2027</span><span class="t">My New Work</span><span class="v">Institution</span></a></li>
+   If the work is upcoming, also add the same line to the /upcoming list
+   in index.html.
 5. Optionally add a line to cv.html in the same way.
 
 
@@ -126,3 +130,17 @@ PUTTING IT ONLINE WITH GITHUB PAGES
    When it works, tick "Enforce HTTPS".
 5. Later edits: open any file on github.com, click the pencil icon, change
    the text, "Commit changes". The site updates by itself.
+
+
+COVERS OF THE FRONT-PAGE TILES
+
+Each tile shows images/covers/<category>.jpg (for example
+images/covers/transmissions.jpg). To change a cover, replace that file with a
+new photo under the same name (about 1200 pixels wide is plenty). The same
+image also appears beside the list on the category page.
+The covers are shown in the site's blue and turn to colour under the mouse.
+How strong the blue is: --blue-strength near the "Front page tiles" part of
+style.css (0 = no blue, 1 = full blue).
+If a cover shows the wrong part of the photo, the position is set in
+index.html on that tile's <img> with style="object-position: center 22%"
+(the second number moves the picture up or down).
