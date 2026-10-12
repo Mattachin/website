@@ -144,3 +144,10 @@ style.css (0 = no blue, 1 = full blue).
 If a cover shows the wrong part of the photo, the position is set in
 index.html on that tile's <img> with style="object-position: center 22%"
 (the second number moves the picture up or down).
+
+
+AFTER CHANGING style.css
+
+Browsers keep an old copy of style.css. After a change, raise the number in
+style.css?v=3 to v=4 (and so on) in all pages, so every visitor gets the new one.
+(Find and replace "style.css?v=3" in all files.)

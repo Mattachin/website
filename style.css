@@ -67,6 +67,7 @@ img { max-width: 100%; height: auto; display: block; }
 .text h2 { font-size: 1.05rem; margin: 2.5rem 0 0.6rem; }
 .text > h2:first-child, .text > .entry:first-child h2 { margin-top: 0; }
 .text ul { margin: 0 0 1em; padding-left: 1.2em; }
+.text ul.links { padding-left: 0; }
 .credits { font-size: 0.9rem; }
 .entry { margin-bottom: 2rem; }
 .entry h2 { margin: 0 0 0.4rem; }
@@ -131,6 +132,15 @@ figure.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: blo
   .tiles { grid-template-columns: minmax(0, 1fr); }
   .catlist .index a { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ---------- A night page (Night Perspectives) ----------
+   A work page whose <body> has class="night" is shown dark, like a night broadcast. */
+body.night { --ink: #e6e7ef; --paper: #0c0c0f; color-scheme: dark; }
+.night .nightmap { margin: 0 0 3.5rem; }
+.night .nightmap img { width: 100%; }
+.night .nightmap figcaption { font-size: 0.75rem; text-align: right; margin-top: 0.4rem; opacity: 0.75; }
+.night .red { color: #f0524a; font-weight: 700; }
+.night .links .audio span { margin-bottom: 0.4rem; }
 
 /* ---------- Footer ---------- */
 .site-foot { margin-top: 6rem; display: flex; flex-wrap: wrap; gap: 0.4rem 2rem; font-size: 0.9rem; }
