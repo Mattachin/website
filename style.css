@@ -109,9 +109,9 @@ figure.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: blo
 #upcoming { margin-bottom: 4.5rem; }
 .tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem 1.75rem; }
 .tile { display: flex; flex-direction: column; gap: 0.75rem; text-decoration: none; }
-.tile .cover { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: #eef0f8; }
+.tile .cover { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--cover-ground, #eef0f8); }
 .tile .cover img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); transition: filter .45s ease; }
-.tile .cover::after { content: ""; position: absolute; inset: 0; background: var(--ink); mix-blend-mode: screen; opacity: var(--blue-strength); transition: opacity .45s ease; pointer-events: none; }
+.tile .cover::after { content: ""; position: absolute; inset: 0; background: var(--cover-blue, var(--ink)); mix-blend-mode: screen; opacity: var(--blue-strength); transition: opacity .45s ease; pointer-events: none; }
 .tile:hover .cover img, .tile:focus-visible .cover img { filter: none; }
 .tile:hover .cover::after, .tile:focus-visible .cover::after { opacity: 0; }
 .tile .tt { font-weight: 700; font-size: 1.2rem; line-height: 1.2; }
@@ -169,3 +169,19 @@ body.night { --ink: #e6e7ef; --paper: #0c0c0f; color-scheme: dark; }
   .index .v { grid-column: 1; }
   .cv dl div { grid-template-columns: minmax(0, 1fr); gap: 0; margin-bottom: 0.9rem; }
 }
+
+
+/* ================= DARK VERSION (white on black, blue covers) =================
+   To go back to the blue-on-white site: delete everything from this line
+   down to "END OF DARK VERSION", then raise style.css?v= in all pages
+   (see README). Nothing else needs to change. */
+:root {
+  --ink: #f2f2f2;          /* text and lines */
+  --paper: #0b0b0b;        /* page background */
+  --cover-blue: #3b449c;   /* the blue on the front-page covers */
+  --cover-ground: #000000;
+  color-scheme: dark;      /* dark audio/video controls and scrollbars */
+}
+.text, .catlist .v, .side figcaption, .catcover figcaption { color: #d6d6d6; }
+/* ================= END OF DARK VERSION ================= */
+
