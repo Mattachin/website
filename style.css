@@ -143,6 +143,11 @@ body.night { --ink: #e6e7ef; --paper: #0c0c0f; color-scheme: dark; }
 .night .red { color: #f0524a; font-weight: 700; }
 .night .links .audio span { margin-bottom: 0.4rem; }
 
+/* Two images side by side in the right column (e.g. a photo and a tall plot) */
+.side .pair { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 1.1rem; align-items: start; margin-bottom: 2rem; }
+.side .pair figure { margin: 0; }
+.side .pair figcaption { text-align: left; line-height: 1.45; }
+
 /* ---------- Footer ---------- */
 .site-foot { margin-top: 6rem; display: flex; flex-wrap: wrap; gap: 0.4rem 2rem; font-size: 0.9rem; }
 .site-foot p { margin: 0; }

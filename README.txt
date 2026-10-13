@@ -149,5 +149,5 @@ index.html on that tile's <img> with style="object-position: center 22%"
 AFTER CHANGING style.css
 
 Browsers keep an old copy of style.css. After a change, raise the number in
-style.css?v=4 to v=5 (and so on) in all pages, so every visitor gets the new one.
-(Find and replace "style.css?v=4" in all files.)
+style.css?v=5 to v=6 (and so on) in all pages, so every visitor gets the new one.
+(Find and replace "style.css?v=5" in all files.)
