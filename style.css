@@ -169,19 +169,3 @@ body.night { --ink: #e6e7ef; --paper: #0c0c0f; color-scheme: dark; }
   .index .v { grid-column: 1; }
   .cv dl div { grid-template-columns: minmax(0, 1fr); gap: 0; margin-bottom: 0.9rem; }
 }
-
-
-/* ================= DARK VERSION (white on black, blue covers) =================
-   To go back to the blue-on-white site: delete everything from this line
-   down to "END OF DARK VERSION", then raise style.css?v= in all pages
-   (see README). Nothing else needs to change. */
-:root {
-  --ink: #f2f2f2;          /* text and lines */
-  --paper: #0b0b0b;        /* page background */
-  --cover-blue: #3b449c;   /* the blue on the front-page covers */
-  --cover-ground: #000000;
-  color-scheme: dark;      /* dark audio/video controls and scrollbars */
-}
-.text, .catlist .v, .side figcaption, .catcover figcaption { color: #d6d6d6; }
-/* ================= END OF DARK VERSION ================= */
-
