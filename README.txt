@@ -149,5 +149,13 @@ index.html on that tile's <img> with style="object-position: center 22%"
 AFTER CHANGING style.css
 
 Browsers keep an old copy of style.css. After a change, raise the number in
-style.css?v=5 to v=6 (and so on) in all pages, so every visitor gets the new one.
-(Find and replace "style.css?v=5" in all files.)
+style.css?v=6 to v=7 (and so on) in all pages, so every visitor gets the new one.
+(Find and replace "style.css?v=6" in all files.)
+
+
+DARK VERSION
+
+The site is shown white on black. The dark colours are one block at the very end
+of style.css, between "DARK VERSION" and "END OF DARK VERSION". Deleting that
+block brings back the blue-on-white site exactly as it was (then raise the
+style.css?v= number in all pages, as above).
