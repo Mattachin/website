@@ -169,3 +169,11 @@ body.night { --ink: #e6e7ef; --paper: #0c0c0f; color-scheme: dark; }
   .index .v { grid-column: 1; }
   .cv dl div { grid-template-columns: minmax(0, 1fr); gap: 0; margin-bottom: 0.9rem; }
 }
+
+/* dated list on work pages */
+.dates { margin: 0 0 1.5em; }
+.dates div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; margin-bottom: 0.6rem; }
+.dates dt { font-variant-numeric: tabular-nums; }
+.dates dd { margin: 0; }
+.dates .with { font-size: 0.85rem; }
+@media (max-width: 640px) { .dates div { grid-template-columns: 1fr; gap: 0; } }
